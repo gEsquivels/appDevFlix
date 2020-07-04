@@ -28,5 +28,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Escopo do projeto
 
 [Unreleased]:
-[0.2.0]: https://github.com/rafaellevissa/appDevFlix/releases/tag/v0.2.0
-[0.1.0]: https://github.com/rafaellevissa/appDevFlix/releases/tag/v0.1.0
+[0.2.0]: https://github.com/gEsquivels/appDevFlix/releases/tag/v0.2.0
+[0.1.0]: https://github.com/gesquivels/appDevFlix/releases/tag/v0.1.0

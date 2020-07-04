@@ -14,9 +14,7 @@ const Container = styled.ScrollView`
 `;
 
 async function changeScreenOrientation(){
-    await ScreenOrientation.lockAsync(
-        ScreenOrientation.OrientationLock.PORTRAIT
-    );
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
 }
 
 export default function Home(){

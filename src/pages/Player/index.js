@@ -9,12 +9,12 @@ const Container = styled.View`
 `;
 async function changeScreenOrientation() {
   await ScreenOrientation.lockAsync(
-    ScreenOrientation.OrientationLock.LANDSCAPE
+    ScreenOrientation.OrientationLock.ALL
   );
 }
 export default function Player({ route }) {
-  changeScreenOrientation();
-
+  changeScreenOrientation()
+  
   const videoId = route.params.videoId;
   const videoURL = `https://www.youtube.com/embed/${videoId}`;
 

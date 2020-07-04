@@ -18,7 +18,7 @@ const VideoScrool = styled.ScrollView`
 `;
 
 const VideoCard = styled.View`
-    padding = 8px;
+    padding-right: 10px;
 `;
 
 const VideoPoster = styled.Image`

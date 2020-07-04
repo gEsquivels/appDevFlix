@@ -1,4 +1,4 @@
-1. Faça o fork (<https://github.com/rafaellevissa/appDevFlix/fork>)
+1. Faça o fork (<https://github.com/gEsquivels/appDevFlix/fork>)
 2. Crie a branch da sua modificação (`git checkout -b feature/nomeDaFeature`)
 3. Commit suas mudanças (`git commit -am ':rocket: Add mais feature'`)
 4. Faça push para sua branch (`git push origin feature/nomeDaFeature`)
