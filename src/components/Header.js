@@ -6,8 +6,9 @@ const Container = styled.View`
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px 25px 0 25px;
+    padding: 60px 25px 0 25px;
     width: 100%;
+    background-color: #333333;
 `;
 
 const Logo = styled.Image`
@@ -15,25 +16,11 @@ const Logo = styled.Image`
     height: 40px;
 `;
 
-const Menu = styled.Text`
-    font-size: 18px;
-    color: #e9ecef;
-    letter-spacing: 0.1px;
-`;
-
 export default function Header(){
     const navigation = useNavigation();
     return(
         <Container>
             <Logo resizeMode="contain" source={require("../assets/short-logo.png")}></Logo>
-            <Menu onPress={() => {
-                navigation.navigate("Playlist");
-                }}
-            >
-                Playlists                
-            </Menu>
-            <Menu>Vídeos</Menu>
-            <Menu>Minha Lista</Menu>
         </Container>
     );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {StatusBar} from 'react-native';
 import styled from 'styled-components/native';
 import * as ScreenOrientation from 'expo-screen-orientation';
@@ -6,7 +6,6 @@ import * as ScreenOrientation from 'expo-screen-orientation';
 import VideosList from '../../Database/videos.json';
 import Header from "../../components/Header";
 import Videos from "../../components/Videos";
-import Poster from "../../components/Poster";
 
 const Container = styled.ScrollView`
     flex: 1;
@@ -18,6 +17,10 @@ async function changeScreenOrientation(){
 }
 
 export default function Home(){
+    const [cat1, setCat1] = useState([]);
+    const [cat2, setCat2] = useState([]);
+    const [cat3, setCat3] = useState([]);
+
     changeScreenOrientation();
     return(
         <>
@@ -26,18 +29,23 @@ export default function Home(){
                 backgroundColor="transparent" 
                 barStyle="light-content"
             />
+            <Header />
             <Container>
-                <Poster
-                    url={"http://i3.ytimg.com/vi/VsU6p7DHVtA/maxresdefault.jpg"}
-                    title={
-                        "Cursos de Tecnologia do SENAI"
+                {VideosList.map(video => {
+                    
+                    if(video.cat == 1){
+                        cat1.push(video)
+
+                    }else if(video.cat == 2){
+                        cat2.push(video)
+
+                    }else if(video.cat == 3){
+                        cat3.push(video)     
                     }
-                    tags={["React Native", "Expo"]}
-                    content={<Header />}
-                ></Poster>
-                <Videos label="Recomendados" videos={VideosList}> </Videos>
-                <Videos label="Lançamentos" videos={VideosList}> </Videos>
-                <Videos label="Mais vistos" videos={VideosList}> </Videos>
+                })}
+                <Videos label="Fundamentos Web" videos={cat1}> </Videos>
+                <Videos label="Backend" videos={cat2}> </Videos>
+                <Videos label="Frontend" videos={cat3}> </Videos>
             </Container>
         </>
     );
